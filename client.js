@@ -5,13 +5,14 @@ const connect = function() {
     host: '135.23.222.131',
     port: 50542
   });
+
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
-
+  
+  //event handler
   conn.on('data', (data) => {
-    console.log(data)
+    console.log('Server says: ', data);
   })
   return conn;
 }
-
 module.exports = connect;
