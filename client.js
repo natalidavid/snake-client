@@ -20,12 +20,6 @@ const connect = function() {
     console.log('Connected to the server');
     conn.write('Name: SNK');
   });
-  
-  //event handler
-  // do something when you receive Data
-  conn.on('data', (data) => {
-    console.log('Server says: ', data);
-  })
 
   return conn;
 }
